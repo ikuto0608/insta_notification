@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+
+Resources:
+  InstaNotification:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: insta_notification.is_ready_to_book
+      Runtime: ruby2.5
+      CodeUri: "./"
+      Timeout: 60
+      Environment:
+        Variables:
+          SLACK_TOKEN: ""
+          SLACK_CHANNEL: ""
