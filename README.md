@@ -5,9 +5,9 @@ Since [Amazon announced](https://aws.amazon.com/blogs/compute/announcing-ruby-su
 
 #### Upload
 ```
-sam package --template-file template.yml --s3-bucket ikutolambda --output-template-file packaged.yaml
+sam package --template-file template.yml --s3-bucket bucket_name --output-template-file packaged.yaml
 ```
 #### Deploy
 ```
-sam deploy --template-file ./packaged.yaml --stack-name InstaNotification --capabilities CAPABILITY_IAM --region us-east-1
+sam deploy --template-file ./packaged.yaml --stack-name stack_name --capabilities CAPABILITY_IAM --region us-east-1
 ```
